@@ -1,0 +1,12 @@
+<div [ngClass]="{'isDone': task.isDone}">
+  <h2>{{task.name}}</h2>
+  <p>{{task.description}}</p>
+  <label>
+    Is done
+    <input type="checkbox" (change)="updateTask()" [(ngModel)]="task.isDone">
+  </label>
+  <button *ngIf="!isLoading" (click)="deleteTask()">Delete task</button>
+  <app-loader *ngIf="isLoading"></app-loader>
+</div>
+
+ 

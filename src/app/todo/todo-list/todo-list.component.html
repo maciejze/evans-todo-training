@@ -1,0 +1,7 @@
+<h1>Moja todo lista</h1>
+<ul *ngIf="!isLoading">
+  <li *ngFor="let task of todoList" >
+    <app-task (emitter)="fetchTasks()" [task]="task"></app-task>
+  </li>
+</ul>
+<div *ngIf="isLoading"><app-loader></app-loader></div>

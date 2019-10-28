@@ -1,0 +1,11 @@
+ul {
+  display: flex;
+  list-style-type: none;
+  li {
+    padding: 20px
+  }
+
+  a.active {
+    color: deeppink;
+  }
+}

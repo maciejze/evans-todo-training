@@ -1,0 +1,11 @@
+<form (ngSubmit)="addTask()" #form="ngForm">
+  <label>Name:
+    <input [(ngModel)]="taskModel.name" name="name" required/>
+    <small *ngIf="form">Name is required</small>
+  </label>
+  <label>Description:
+    <input [(ngModel)]="taskModel.description" name="description" required/>
+  </label>
+  <button type="submit" [disabled]="form.invalid">Add task</button>
+</form>
+
